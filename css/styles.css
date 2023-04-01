@@ -1994,7 +1994,7 @@ a:hover.back-to-top {
 .navbar-custom.top-nav-collapse {
     padding: 0.5rem 1.5rem 0.5rem 2rem;
     background-color: #fff;
-    box-shadow: 1px 1px 10px 0px #5f612e;
+    box-shadow: 1px 1px 10px 0px #555;
 }
 
 .navbar-custom.top-nav-collapse .nav-item .nav-link:hover,
