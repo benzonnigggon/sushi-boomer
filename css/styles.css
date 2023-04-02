@@ -1028,15 +1028,6 @@ screen and (-ms-high-contrast: none) {
     text-align: justify;
 }
 
-.card {
-    max-width: 21rem;
-    margin-right: auto;
-    margin-bottom: 3.5rem;
-    margin-left: auto;
-    padding: 0;
-    background: transparent;
-}
-
 .card-image {
     max-width: 16rem;
     margin-right: auto;
@@ -2084,9 +2075,9 @@ a:hover.back-to-top {
     display: inline-block;
     width: 17rem;
     max-width: 100%;
-    margin-right: 1rem;
-    margin-left: 1rem;
     vertical-align: top;
+    padding: 0;
+    background: transparent;
 }
 
 
@@ -2578,4 +2569,43 @@ label {
     font-weight: 600;
     line-height: 1.2em;
     color: #fff;
+}
+.v-card {
+    border: none !important;
+    border-radius: 10% !important;
+    overflow: hidden;
+    box-shadow: 10px 10px 10px -5px #818181;
+}
+.v-title {
+    padding: 15px;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.v-title span {
+    font-weight: 600;
+}
+.v-title ul li {
+    color: #666;
+    list-style: none;
+}
+.v-image {
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(0deg, #15254c -20%, transparent 100%);
+}
+.v-image img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.v-more {
+    color: #007400;
+    text-decoration: underline;
+}
+.bottom-line {
+    border-bottom: 2px solid #ccc;
+    margin: 0 -10px;
 }
