@@ -80,6 +80,7 @@ h6 {
     color: #e60032;
     font: 700 0.9rem/1rem "DinoPro", sans-serif;
     text-align: center;
+    padding-top: 10px;
 }
 
 .p-heading {
@@ -131,7 +132,7 @@ a.white {
     border: 0.125rem solid #15254c;
     border-radius: 2rem;
     background-color: #15254c;
-    color: #fff;
+    color: #fff !important;
     font: 700 0.875rem/0 "Open Sans", sans-serif;
     text-decoration: none;
     transition: all 0.2s;
@@ -139,81 +140,9 @@ a.white {
 
 .btn-solid-reg:hover {
     background-color: #fff;
-    color: #15254c;
+    color: #15254c !important;
     text-decoration: none;
     border: 0.125rem solid #15254c;
-}
-
-.btn-solid-lg {
-    display: inline-block;
-    padding: 1.375rem 2.625rem 1.375rem 2.625rem;
-    border: 0.125rem solid #e60032;
-    border-radius: 2rem;
-    background-color: #e60032;
-    color: #fff;
-    font: 700 0.875rem/0 "Open Sans", sans-serif;
-    text-decoration: none;
-    transition: all 0.2s;
-}
-
-.btn-solid-lg:hover {
-    background-color: transparent;
-    color: #e60032;
-    text-decoration: none;
-}
-
-.btn-outline-reg {
-    display: inline-block;
-    padding: 1.1875rem 2.125rem 1.1875rem 2.125rem;
-    border: 0.125rem solid #e60032;
-    border-radius: 2rem;
-    background-color: transparent;
-    color: #e60032;
-    font: 700 0.875rem/0 "Open Sans", sans-serif;
-    text-decoration: none;
-    transition: all 0.2s;
-}
-
-.btn-outline-reg:hover {
-    background-color: #e60032;
-    color: #dbffb4;
-    text-decoration: none;
-}
-
-.btn-outline-lg {
-    display: inline-block;
-    padding: 1.375rem 2.625rem 1.375rem 2.625rem;
-    border: 0.125rem solid #e60032;
-    border-radius: 2rem;
-    background-color: transparent;
-    color: #e60032;
-    font: 700 0.875rem/0 "Open Sans", sans-serif;
-    text-decoration: none;
-    transition: all 0.2s;
-}
-
-.btn-outline-lg:hover {
-    background-color: #e60032;
-    color: #fff;
-    text-decoration: none;
-}
-
-.btn-outline-sm {
-    display: inline-block;
-    padding: 0.875rem 1.5rem 0.875rem 1.5rem;
-    border: 0.125rem solid #e60032;
-    border-radius: 2rem;
-    background-color: transparent;
-    color: #e60032;
-    font: 700 0.875rem/0 "Open Sans", sans-serif;
-    text-decoration: none;
-    transition: all 0.2s;
-}
-
-.btn-outline-sm:hover {
-    background-color: #e60032;
-    color: #fff;
-    text-decoration: none;
 }
 
 .form-group {
@@ -1953,14 +1882,20 @@ a:hover.back-to-top {
 @media (max-width: 992px) {
     /* Navigation */
     .navbar-custom {
-        box-shadow: 1px 1px 9px -4px #98d45c;
-        background: rgb(255 254 221)
+        box-shadow: 1px 1px 9px -4px #6c6c6c;
+        background: rgb(255 255 255);
+    }
+    .navbar-custom .nav-item .nav-link {
+        color: #15254c;
     }
     .navbar-nav .nav-item {
         padding: 5px 0px;
     }
     .logo-image img {
         width: 80px !important
+    }
+    .top-nav-collapse .logo-image img {
+        width: 60px !important;
     }
 }
 
@@ -2242,6 +2177,7 @@ a:hover.back-to-top {
     width: 80%;
     margin-right: auto;
     margin-left: auto;
+    font-size: 4.2rem;
 }
 
 .ex-basic-2 {
@@ -2625,7 +2561,35 @@ label {
 }
 .r-card {
     border: 1px solid #ccc;
+    position: sticky;
+    top: 25%
+}
+.full-article {
+    margin-bottom: 100px;
+}
+.job-list ul {
+    padding-inline-start: 20px
 }
 .r-details {
     color: #444;
+}
+@media(max-width:768px) {
+    .job-title-block {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media(max-width:992px) {
+    .d-none-md {
+        display: none;
+    }
+    
+    .container {
+        max-width: 95%;
+    }
+}
+@media(max-width:1200px) {
+    .container {
+        max-width: 90%;
+    }
 }
