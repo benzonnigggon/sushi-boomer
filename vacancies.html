@@ -67,7 +67,7 @@
                         <a class="nav-link page-scroll" href="vacancies.html">Vacancies</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link page-scroll scroll-contact" href="">Contact us</a>
+                        <a class="nav-link page-scroll " id="scrollBottom">Contact us</a>
                     </li>
                 </ul>
             </div>
@@ -79,7 +79,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1 data-aos-duration="2500" data-aos="fade-down" class="aos-init aos-animate">Contact Us</h1>
+                        <h1 data-aos-duration="2500" data-aos="fade-down" class="aos-init aos-animate">Vacancies</h1>
                     </div>
                 </div>
             </div>
@@ -309,6 +309,18 @@
     <script src=" js/validator.min.js "></script>
     <script src=" js/scripts.js "></script>
     <script src=" js/modal.js "></script>
+    <script>
+        $(document).ready(function() {
+
+            $('#scrollBottom').click(function() {
+                $('html, body').animate({
+                    scrollTop: $(document).height()
+                }, 'slow');
+                return false;
+            });
+
+        });
+    </script>
 
     <script>
         AOS.init();
