@@ -126,6 +126,10 @@ a.white {
     margin-left: auto;
 }
 
+#scrollBottom {
+    cursor: pointer
+}
+
 .btn-solid-reg {
     display: inline-block;
     padding: 1.1875rem 2.125rem 1.1875rem 2.125rem;
@@ -930,6 +934,7 @@ screen and (-ms-high-contrast: none) {
     transition: transform 5s;
     border: 1px solid #ccc;
     box-shadow: 0px 14px 20px -20px #444;
+    margin-bottom: 50px;
 }
 
 .service-card:hover .card-image img {
