@@ -41,7 +41,7 @@ p {
 
 h1 {
     color: #333;
-    font: 700 2.5rem/3.125rem "AvenyTLBU", sans-serif;
+    font: 700 3.5rem/4.125rem "AvenyTLBU", sans-serif;
     /* font: 700 2.5rem/3.125rem "Open Sans", sans-serif; */
     letter-spacing: -0.2px;
 }
@@ -147,6 +147,31 @@ a.white {
     color: #15254c !important;
     text-decoration: none;
     border: 0.125rem solid #15254c;
+}
+
+.btn-scroll {
+    display: inline-block;
+    border: 0.125rem solid #15254c;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: #15254c;
+    color: #fff !important;
+    font: 700 0.875rem/0 "Open Sans", sans-serif;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.btn-scroll:hover {
+    background-color: #fff;
+    color: #15254c !important;
+    text-decoration: none;
+    border: 0.125rem solid #15254c;
+}
+
+.btn-scroll i {
+    font-size: 25px;
+    ;
 }
 
 .form-group {
@@ -313,16 +338,36 @@ screen and (-ms-high-contrast: none) {
     position: absolute;
     left: 10%;
     z-index: 999;
-    backdrop-filter: ;
 }
 
-@media(min-width:1300px) {
-    .header .header-content img {
-        height: 100vh;
+
+/* @media(min-width:992px) {
+    .header .header-content .swiper-slide {
+        overflow: hidden;
+    }
+    .header .header-content .swiper-slide img {
+        object-fit: cover;
+        object-position: bottom;
+        width: 100%;
     }
     .header .header-content img::after {
         background: rgba(21, 37, 76, 0.5);
     }
+} */
+
+.header .header-content .swiper-slide {
+    overflow: hidden;
+    max-height: 100vh;
+}
+
+.header .header-content .swiper-slide img {
+    object-fit: cover;
+    object-position: bottom;
+    width: 100%;
+}
+
+.header .header-content img::after {
+    background: rgba(21, 37, 76, 0.5);
 }
 
 .banner-overlay {
@@ -533,12 +578,6 @@ screen and (-ms-high-contrast: none) {
     opacity: 0;
 }
 
-
-/* end of fade-move animation for details lightbox - magnific popup */
-
-
-/* Fade Animation For Image Lightbox - Magnific Popup */
-
 @-webkit-keyframes fadeIn {
     from {
         opacity: 0;
@@ -584,18 +623,6 @@ screen and (-ms-high-contrast: none) {
     -webkit-animation: fadeOut 0.8s;
     animation: fadeOut 0.8s;
 }
-
-
-/* end of fade animation for image lightbox - magnific popup */
-
-
-/*************************/
-
-
-/*     02. Preloader     */
-
-
-/*************************/
 
 .spinner-wrapper {
     position: fixed;
@@ -665,15 +692,6 @@ screen and (-ms-high-contrast: none) {
         transform: scale(1.0);
     }
 }
-
-
-/**************************/
-
-
-/*     03. Navigation     */
-
-
-/**************************/
 
 .navbar-custom {
     font: 700 0.875rem/0.875rem "Open Sans", sans-serif;
@@ -827,24 +845,33 @@ screen and (-ms-high-contrast: none) {
     margin-right: 0.125rem;
 }
 
+@media (max-width:992px) {
+    .header {
+        margin-top: 10%;
+    }
+}
 
-/*********************/
+@media (max-width:768px) {
+    .header {
+        margin-top: 13%;
+    }
+}
 
+@media (max-width:600px) {
+    .header {
+        margin-top: 18%;
+    }
+}
 
-/*    04. Header     */
-
-
-/*********************/
-
-.header {
-    background-color: #dbffb4;
-    /* background-color: #87CEEB; */
-    /* background-color: #182e03; */
+@media (max-width:500px) {
+    .header {
+        margin-top: 20%;
+    }
 }
 
 @media (max-width:425px) {
     .header {
-        margin-top: 22%;
+        margin-top: 25%;
     }
 }
 
@@ -932,7 +959,8 @@ screen and (-ms-high-contrast: none) {
 
 .service-card {
     transition: transform 5s;
-    border: 1px solid #ccc;
+    border: none;
+    /* border: 1px solid #ccc; */
     box-shadow: 0px 14px 20px -20px #444;
     margin-bottom: 50px;
 }
@@ -2352,10 +2380,13 @@ a:hover.back-to-top {
     }
     /* end of extra pages */
 }
+.header-content .row {
+    height: auto;
+}
 @media(max-width: 767px) {
     .header-content .row {
-        height: 65vh;
         align-items: end;
+        margin-top: -50px;
     }
     
     .text-container h1 {
@@ -2364,7 +2395,7 @@ a:hover.back-to-top {
 }
 @media(max-width: 430px) {
     .header-content .row {
-        height: auto;
+        margin: auto;
     }
     
     .header .text-container {
@@ -2855,6 +2886,26 @@ section {
 .about .btn-read-more:hover i {
     transform: translateX(5px);
 }
+#image-gallery .image .img-responsive {
+    object-fit: contain;
+    object-position: right;
+    width: 100%;
+    height: 300px
+}
+.album-desc {
+    padding: 10px;
+    background: #f6f9ff;
+    overflow: hidden;
+    border-radius: 0px 0px 15px 15px;
+}
+.feature-block a:hover {
+    text-decoration: none !important;
+}
+.read-more {
+    text-decoration: underline !important;
+    display: flex;
+    justify-content: end;
+}
 
 /* why */
 .why-us {
@@ -2864,8 +2915,24 @@ section {
     min-height: 500px;
     background-size: cover;
 }
+.carousel-inner {
+    padding: 5%;
+}
 .why-us .slides {
-    background-color: #f7f9fc;
+    background-color: #f6f9ff;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.why-us .slides .carousel-control-prev {
+    background: linear-gradient(90deg, #bed8ff -50%, transparent);
+}
+.why-us .slides .carousel-control-next {
+    background: linear-gradient(270deg, #bed8ff -50%, transparent);
+}
+.why-us .slides .carousel-control-prev,
+.why-us .slides .carousel-control-next {
+    width: 10%;
 }
 .why-us .slides .slide {
     height: 100%
